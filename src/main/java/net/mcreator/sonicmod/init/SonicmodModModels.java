@@ -9,6 +9,11 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.api.distmarker.Dist;
 
+import net.mcreator.sonicmod.client.model.Modelegg_slammer;
+import net.mcreator.sonicmod.client.model.Modelegg_shooter;
+import net.mcreator.sonicmod.client.model.Modelegg_phantom;
+import net.mcreator.sonicmod.client.model.Modelegg_bomber;
+
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
 public class SonicmodModModels {
 	@SubscribeEvent
