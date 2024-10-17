@@ -1,0 +1,7 @@
+{
+  "_fv": 69,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_trigger\" deletable=\"false\" x=\"352\" y=\"241\"><field name=\"trigger\">no_ext_trigger</field><next><block type=\"entity_pathfind_to\"><value name=\"entity\"><block type=\"entity_from_deps\"></block></value><value name=\"x\"><block type=\"coord_x\"></block></value><value name=\"y\"><block type=\"coord_y\"></block></value><value name=\"z\"><block type=\"coord_z\"></block></value><value name=\"speed\"><block type=\"math_number\"><field name=\"NUM\">20</field></block></value></block></next></block><block type=\"entity_look_angle_x\" x=\"154\" y=\"391\"><value name=\"entity\"><block type=\"entity_from_deps\"></block></value></block><block type=\"entity_look_angle_y\" x=\"539\" y=\"415\"><value name=\"entity\"><block type=\"entity_from_deps\"></block></value></block><block type=\"entity_look_angle_z\" x=\"960\" y=\"405\"><value name=\"entity\"><block type=\"entity_from_deps\"></block></value></block><block type=\"entity_pos_z\" x=\"314\" y=\"468\"><value name=\"entity\"><block type=\"entity_from_deps\"></block></value></block><block type=\"entity_pos_x\" x=\"213\" y=\"509\"><value name=\"entity\"><block type=\"entity_from_deps\"></block></value></block><block type=\"entity_pos_y\" x=\"593\" y=\"536\"><value name=\"entity\"><block type=\"entity_from_deps\"></block></value></block></xml>"
+  }
+}

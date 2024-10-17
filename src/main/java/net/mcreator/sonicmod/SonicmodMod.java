@@ -18,6 +18,10 @@ import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.FriendlyByteBuf;
 
+import net.mcreator.sonicmod.network.SonicmodModVariables;
+import net.mcreator.sonicmod.init.SonicmodModTabs;
+import net.mcreator.sonicmod.init.SonicmodModItems;
+
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.Map;
 import java.util.List;
@@ -35,6 +39,11 @@ public class SonicmodMod {
 		// End of user code block mod constructor
 		NeoForge.EVENT_BUS.register(this);
 		modEventBus.addListener(this::registerNetworking);
+
+		SonicmodModItems.REGISTRY.register(modEventBus);
+
+		SonicmodModTabs.REGISTRY.register(modEventBus);
+		SonicmodModVariables.ATTACHMENT_TYPES.register(modEventBus);
 
 		// Start of user code block mod init
 		// End of user code block mod init

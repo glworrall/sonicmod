@@ -1,0 +1,9 @@
+{
+  "_fv": 69,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "Z",
+    "keyBindingName": "Skill 4",
+    "keyBindingCategoryKey": "misc"
+  }
+}

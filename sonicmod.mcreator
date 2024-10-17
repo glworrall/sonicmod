@@ -1,15 +1,273 @@
 {
-  "mod_elements": [],
-  "variable_elements": [],
+  "mod_elements": [
+    {
+      "name": "SonicMod",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sonic_mod",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "Sonic",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sonic",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/sonicmod/item/SonicItem.java",
+          "src/main/resources/assets/sonicmod/models/item/sonic_leggings.json",
+          "src/main/resources/assets/sonicmod/models/item/sonic_boots.json",
+          "src/main/resources/assets/sonicmod/models/item/sonic_helmet.json",
+          "src/main/resources/assets/sonicmod/models/item/sonic_chestplate.json"
+        ]
+      },
+      "path": "~/Characters"
+    },
+    {
+      "name": "SonicHelmetTickEvent",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sonic_helmet_tick_event",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/sonicmod/procedures/SonicHelmetTickEventProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Characters"
+    },
+    {
+      "name": "Skilll1",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skilll_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/sonicmod/network/Skilll1Message.java"
+        ]
+      },
+      "path": "~/KeyBindings"
+    },
+    {
+      "name": "Skill2",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skill_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/sonicmod/network/Skill2Message.java"
+        ]
+      },
+      "path": "~/KeyBindings"
+    },
+    {
+      "name": "Skill3",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skill_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/sonicmod/network/Skill3Message.java"
+        ]
+      },
+      "path": "~/KeyBindings"
+    },
+    {
+      "name": "Skill4",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skill_4",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/sonicmod/network/Skill4Message.java"
+        ]
+      },
+      "path": "~/KeyBindings"
+    },
+    {
+      "name": "Skill5",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skill_5",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/sonicmod/network/Skill5Message.java"
+        ]
+      },
+      "path": "~/KeyBindings"
+    },
+    {
+      "name": "Skilll1OnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skilll_1_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/sonicmod/procedures/Skilll1OnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/KeyBindings"
+    },
+    {
+      "name": "Skilll1OnKeyReleased",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skilll_1_on_key_released",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/sonicmod/procedures/Skilll1OnKeyReleasedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/KeyBindings"
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "IsSonic",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "SpinDash",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "CoolDown",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "HomingAttack",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "Boost",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "SonicBoom",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "SonicWind",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "Spindashmax",
+      "type": "number",
+      "scope": "map",
+      "value": "30.0"
+    },
+    {
+      "name": "spindashcharge",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    }
+  ],
   "sound_elements": [],
-  "tag_elements": {},
+  "tag_elements": {
+    "ITEMS:minecraft:chest_armor": [
+      "~CUSTOM:Sonic.body"
+    ],
+    "ITEMS:minecraft:head_armor": [
+      "~CUSTOM:Sonic.helmet"
+    ],
+    "ITEMS:minecraft:foot_armor": [
+      "~CUSTOM:Sonic.boots"
+    ],
+    "ITEMS:minecraft:leg_armor": [
+      "~CUSTOM:Sonic.legs"
+    ]
+  },
   "tab_element_order": {},
   "language_map": {
-    "en_us": {}
+    "en_us": {
+      "item.sonicmod.sonic_chestplate": "Sonic Chestplate",
+      "item.sonicmod.sonic_boots": "Sonic Boots",
+      "item_group.sonicmod.sonic_mod": "Sonic Mod",
+      "item.sonicmod.sonic_helmet": "Sonic Helmet",
+      "key.sonicmod.skill_4": "Skill 4",
+      "key.sonicmod.skill_3": "Skill 3",
+      "item.sonicmod.sonic_leggings": "Sonic Leggings",
+      "key.sonicmod.skilll_1": "Skilll 1",
+      "key.sonicmod.skill_5": "Skill 5",
+      "key.sonicmod.skill_2": "Skill 2"
+    }
   },
   "foldersRoot": {
     "name": "~",
-    "children": []
+    "children": [
+      {
+        "name": "Characters",
+        "children": []
+      },
+      {
+        "name": "KeyBindings",
+        "children": []
+      },
+      {
+        "name": "Procedures",
+        "children": []
+      }
+    ]
   },
   "workspaceSettings": {
     "modid": "sonicmod",

@@ -1,0 +1,15 @@
+{
+  "_fv": 69,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "R",
+    "keyBindingName": "Skilll 1",
+    "keyBindingCategoryKey": "misc",
+    "onKeyPressed": {
+      "name": "Skilll1OnKeyPressed"
+    },
+    "onKeyReleased": {
+      "name": "Skilll1OnKeyReleased"
+    }
+  }
+}

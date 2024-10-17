@@ -1,1 +1,12 @@
-{}
+{
+  "item.sonicmod.sonic_chestplate": "Sonic Chestplate",
+  "item.sonicmod.sonic_boots": "Sonic Boots",
+  "item_group.sonicmod.sonic_mod": "Sonic Mod",
+  "item.sonicmod.sonic_helmet": "Sonic Helmet",
+  "key.sonicmod.skill_4": "Skill 4",
+  "key.sonicmod.skill_3": "Skill 3",
+  "item.sonicmod.sonic_leggings": "Sonic Leggings",
+  "key.sonicmod.skilll_1": "Skilll 1",
+  "key.sonicmod.skill_5": "Skill 5",
+  "key.sonicmod.skill_2": "Skill 2"
+}

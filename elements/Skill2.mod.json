@@ -1,0 +1,9 @@
+{
+  "_fv": 69,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "F",
+    "keyBindingName": "Skill 2",
+    "keyBindingCategoryKey": "misc"
+  }
+}
