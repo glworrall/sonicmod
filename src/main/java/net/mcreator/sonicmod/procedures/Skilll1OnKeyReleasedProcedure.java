@@ -11,7 +11,7 @@ public class Skilll1OnKeyReleasedProcedure {
 			return;
 		double yaw = 0;
 		yaw = entity.getYRot();
-		entity.setDeltaMovement(new Vec3((entity.getData(SonicmodModVariables.PLAYER_VARIABLES).spindashcharge * 90 * Math.cos((yaw + 90) * (Math.PI / 180))), 0,
-				(entity.getData(SonicmodModVariables.PLAYER_VARIABLES).spindashcharge * 90 * Math.cos((yaw + 90) * (Math.PI / 180)))));
+		entity.setDeltaMovement(new Vec3((entity.getData(SonicmodModVariables.PLAYER_VARIABLES).spindashcharge * Math.cos((yaw + 90) * (Math.PI / 180))), 0,
+				(entity.getData(SonicmodModVariables.PLAYER_VARIABLES).spindashcharge * Math.cos((yaw + 90) * (Math.PI / 180)))));
 	}
 }
