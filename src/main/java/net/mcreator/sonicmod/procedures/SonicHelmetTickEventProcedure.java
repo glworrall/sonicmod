@@ -8,6 +8,7 @@ import net.minecraft.world.entity.Entity;
 
 import net.mcreator.sonicmod.network.SonicmodModVariables;
 import net.mcreator.sonicmod.init.SonicmodModItems;
+import net.mcreator.sonicmod.SonicmodMod;
 
 public class SonicHelmetTickEventProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
@@ -19,8 +20,20 @@ public class SonicHelmetTickEventProcedure {
 					if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).getItem() == SonicmodModItems.SONIC_BOOTS.get()) {
 						SonicmodModVariables.MapVariables.get(world).IsSonic = true;
 						SonicmodModVariables.MapVariables.get(world).syncData(world);
+						SonicmodModVariables.MapVariables.get(world).SpinDash = true;
+						SonicmodModVariables.MapVariables.get(world).syncData(world);
+						SonicmodMod.LOGGER.info("Sonic");
+					} else {
+						SonicmodModVariables.MapVariables.get(world).IsSonic = false;
+						SonicmodModVariables.MapVariables.get(world).syncData(world);
 					}
+				} else {
+					SonicmodModVariables.MapVariables.get(world).IsSonic = false;
+					SonicmodModVariables.MapVariables.get(world).syncData(world);
 				}
+			} else {
+				SonicmodModVariables.MapVariables.get(world).IsSonic = false;
+				SonicmodModVariables.MapVariables.get(world).syncData(world);
 			}
 		}
 	}

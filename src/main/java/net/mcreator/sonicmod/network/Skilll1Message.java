@@ -57,7 +57,7 @@ public record Skilll1Message(int eventType, int pressedms) implements CustomPack
 		}
 		if (type == 1) {
 
-			Skilll1OnKeyReleasedProcedure.execute(x, y, z, entity);
+			Skilll1OnKeyReleasedProcedure.execute(world, entity);
 		}
 	}
 
