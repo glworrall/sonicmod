@@ -1,34 +1,29 @@
 package net.mcreator.sonicmod.procedures;
 
-import net.neoforged.neoforge.event.tick.PlayerTickEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.bus.api.Event;
-
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.network.chat.Component;
 
 import net.mcreator.sonicmod.network.SonicmodModVariables;
 
-import javax.annotation.Nullable;
-
-@EventBusSubscriber
 public class Skilll1OnKeyPressedProcedure {
-	@SubscribeEvent
-	public static void onPlayerTick(PlayerTickEvent.Post event) {
-		execute(event, event.getEntity().level());
-	}
-
-	public static void execute(LevelAccessor world) {
-		execute(null, world);
-	}
-
-	private static void execute(@Nullable Event event, LevelAccessor world) {
-		if (SonicmodModVariables.MapVariables.get(world).IsSonic == true) {
-			if (SonicmodModVariables.MapVariables.get(world).SpinDash == true) {
-				if (SonicmodModVariables.MapVariables.get(world).spindashcharge <= SonicmodModVariables.MapVariables.get(world).Spindashmax) {
-					SonicmodModVariables.MapVariables.get(world).Spindashmax = SonicmodModVariables.MapVariables.get(world).spindashcharge + 1;
-					SonicmodModVariables.MapVariables.get(world).syncData(world);
+	public static void execute(LevelAccessor world, Entity entity) {
+		if (entity == null)
+			return;
+		if (entity.getData(SonicmodModVariables.PLAYER_VARIABLES).IsSonic == true) {
+			if (entity.getData(SonicmodModVariables.PLAYER_VARIABLES).SpinDash == true) {
+				if (entity.getData(SonicmodModVariables.PLAYER_VARIABLES).spindashcharge <= entity.getData(SonicmodModVariables.PLAYER_VARIABLES).Spindashmax) {
+					{
+						SonicmodModVariables.PlayerVariables _vars = entity.getData(SonicmodModVariables.PLAYER_VARIABLES);
+						_vars.spindashcharge = entity.getData(SonicmodModVariables.PLAYER_VARIABLES).spindashcharge + 1;
+						_vars.syncPlayerVariables(entity);
+					}
+					if (!world.isClientSide() && world.getServer() != null)
+						world.getServer().getPlayerList().broadcastSystemMessage(Component.literal(("Spindash" + entity.getData(SonicmodModVariables.PLAYER_VARIABLES).spindashcharge)), false);
 				}
+			} else {
+				if (!world.isClientSide() && world.getServer() != null)
+					world.getServer().getPlayerList().broadcastSystemMessage(Component.literal(("Spindash" + entity.getData(SonicmodModVariables.PLAYER_VARIABLES).spindashcharge)), false);
 			}
 		}
 	}

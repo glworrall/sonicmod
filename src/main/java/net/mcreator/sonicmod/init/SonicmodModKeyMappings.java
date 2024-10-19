@@ -20,7 +20,7 @@ import net.mcreator.sonicmod.network.Skilll1Message;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
 public class SonicmodModKeyMappings {
-	public static final KeyMapping SKILLL_1 = new KeyMapping("key.sonicmod.skilll_1", GLFW.GLFW_KEY_R, "key.categories.misc") {
+	public static final KeyMapping SKILLL_1 = new KeyMapping("key.sonicmod.skilll_1", GLFW.GLFW_KEY_R, "key.categories.movement") {
 		private boolean isDownOld = false;
 
 		@Override

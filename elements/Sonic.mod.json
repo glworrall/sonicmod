@@ -10,18 +10,6 @@
     "textureLeggings": "minecraft:diamond_leggings",
     "enableBoots": true,
     "textureBoots": "minecraft:diamond_boots",
-    "onHelmetTick": {
-      "name": "SonicHelmetTickEvent"
-    },
-    "onBodyTick": {
-      "name": "SonicHelmetTickEvent"
-    },
-    "onLeggingsTick": {
-      "name": "SonicHelmetTickEvent"
-    },
-    "onBootsTick": {
-      "name": "SonicHelmetTickEvent"
-    },
     "creativeTabs": [
       {
         "value": "CUSTOM:SonicMod"

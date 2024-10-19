@@ -28,29 +28,6 @@
       "path": "~/Characters"
     },
     {
-      "name": "SonicHelmetTickEvent",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sonic_helmet_tick_event",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/sonicmod/procedures/SonicHelmetTickEventProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Characters"
-    },
-    {
       "name": "Skilll1",
       "type": "keybind",
       "compiles": true,
@@ -127,6 +104,10 @@
         ],
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -148,69 +129,84 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
       "path": "~/KeyBindings"
+    },
+    {
+      "name": "Playercheck",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "playercheck",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/sonicmod/procedures/PlayercheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
     }
   ],
   "variable_elements": [
     {
       "name": "IsSonic",
       "type": "logic",
-      "scope": "map",
+      "scope": "player_persistent",
       "value": "false"
     },
     {
       "name": "SpinDash",
       "type": "logic",
-      "scope": "map",
+      "scope": "player_persistent",
       "value": "false"
     },
     {
       "name": "CoolDown",
       "type": "logic",
-      "scope": "map",
+      "scope": "player_persistent",
       "value": "false"
     },
     {
       "name": "HomingAttack",
       "type": "logic",
-      "scope": "map",
+      "scope": "player_persistent",
       "value": "false"
     },
     {
       "name": "Boost",
       "type": "logic",
-      "scope": "map",
+      "scope": "player_persistent",
       "value": "false"
     },
     {
       "name": "SonicBoom",
       "type": "logic",
-      "scope": "map",
+      "scope": "player_persistent",
       "value": "false"
     },
     {
       "name": "SonicWind",
       "type": "logic",
-      "scope": "map",
+      "scope": "player_persistent",
       "value": "false"
     },
     {
       "name": "Spindashmax",
       "type": "number",
-      "scope": "map",
+      "scope": "player_persistent",
       "value": "30.0"
     },
     {
       "name": "spindashcharge",
       "type": "number",
-      "scope": "map",
+      "scope": "player_persistent",
       "value": "0"
     }
   ],

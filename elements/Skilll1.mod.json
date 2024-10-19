@@ -4,7 +4,7 @@
   "definition": {
     "triggerKey": "R",
     "keyBindingName": "Skilll 1",
-    "keyBindingCategoryKey": "misc",
+    "keyBindingCategoryKey": "movement",
     "onKeyPressed": {
       "name": "Skilll1OnKeyPressed"
     },
