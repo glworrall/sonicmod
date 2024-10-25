@@ -38,11 +38,6 @@ public class PlayercheckProcedure {
 							_vars.IsSonic = true;
 							_vars.syncPlayerVariables(entity);
 						}
-						{
-							SonicmodModVariables.PlayerVariables _vars = entity.getData(SonicmodModVariables.PLAYER_VARIABLES);
-							_vars.IsSonic = true;
-							_vars.syncPlayerVariables(entity);
-						}
 					}
 				}
 			}

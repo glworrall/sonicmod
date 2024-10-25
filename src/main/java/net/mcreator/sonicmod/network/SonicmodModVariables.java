@@ -70,6 +70,7 @@ public class SonicmodModVariables {
 			clone.SonicWind = original.SonicWind;
 			clone.Spindashmax = original.Spindashmax;
 			clone.spindashcharge = original.spindashcharge;
+			clone.RPressed = original.RPressed;
 			if (!event.isWasDeath()) {
 			}
 			event.getEntity().setData(PLAYER_VARIABLES, clone);
@@ -86,6 +87,7 @@ public class SonicmodModVariables {
 		public boolean SonicWind = false;
 		public double Spindashmax = 30.0;
 		public double spindashcharge = 0;
+		public boolean RPressed = false;
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
@@ -99,6 +101,7 @@ public class SonicmodModVariables {
 			nbt.putBoolean("SonicWind", SonicWind);
 			nbt.putDouble("Spindashmax", Spindashmax);
 			nbt.putDouble("spindashcharge", spindashcharge);
+			nbt.putBoolean("RPressed", RPressed);
 			return nbt;
 		}
 
@@ -113,6 +116,7 @@ public class SonicmodModVariables {
 			SonicWind = nbt.getBoolean("SonicWind");
 			Spindashmax = nbt.getDouble("Spindashmax");
 			spindashcharge = nbt.getDouble("spindashcharge");
+			RPressed = nbt.getBoolean("RPressed");
 		}
 
 		public void syncPlayerVariables(Entity entity) {

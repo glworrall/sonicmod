@@ -12,7 +12,7 @@ public class Skilll1OnKeyPressedProcedure {
 			if (entity.getData(SonicmodModVariables.PLAYER_VARIABLES).SpinDash == true) {
 				{
 					SonicmodModVariables.PlayerVariables _vars = entity.getData(SonicmodModVariables.PLAYER_VARIABLES);
-					_vars.spindashcharge = entity.getData(SonicmodModVariables.PLAYER_VARIABLES).spindashcharge + 1;
+					_vars.spindashcharge = 30;
 					_vars.syncPlayerVariables(entity);
 				}
 			}

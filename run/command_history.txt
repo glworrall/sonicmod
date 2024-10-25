@@ -1,1 +1,2 @@
 /gamemode survival
+/time set day

@@ -204,6 +204,12 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "RPressed",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [],
@@ -268,5 +274,5 @@
     "currentGenerator": "neoforge-1.21.1",
     "modElementsPackage": "net.mcreator.sonicmod"
   },
-  "mcreatorVersion": 202400340615
+  "mcreatorVersion": 202400342716
 }
